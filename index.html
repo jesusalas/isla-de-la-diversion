@@ -1,72 +1,101 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/materialize.min.css">
   <title>Isla de la Diversion</title>
 </head>
-<body id="top">
-  <div class="group demo">
-    <div class="one_third first">
-      <img src="images/logo.png" style="height:300px;" alt="">
+<body>
+ 
+  <ul id="dropdown1" class="dropdown-content">
+    <li><a href="#areas">Discapacidad Motriz</a></li>
+    <li><a href="#areas">Discapacidad Intelectual</a></li>
+    <li><a href="#areas">Discapacidad Visual</a></li>
+  </ul>
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#inicio" class="brand-logo">Logo</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a class="dropdown-button" data-activates="dropdown1">Areas de juego</a></li>
+        <li><a href="#compra_boletos">Compra de Boletos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
     </div>
-    <div class="two_third">
-      <img src="images/logo-kids.png" style="height:300px;" alt="">  
-    </div>  
-  </div>
-
-  <div class="wrapper row1">
-    <header id="header" class="hoc clear"> 
-      <!-- ################################################################################################ -->
-      <div id="logo" class="fl_left">
-        <h1><a href="index.html">Doggax</a></h1>
-      </div>
-      <nav id="mainav" class="fl_right">
-        <ul class="clear">
-          <li class="active"><a href="index.html">Inicio</a></li>
-          <li><a href="#">Nosotros</a></li>
-          <li><a class="drop" href="#">Areas</a>
-            <ul>
-              <li><a href="pages/gallery.html">Discapacidad Motriz</a></li>
-              <li><a href="pages/full-width.html">Discapacidad Intelectual</a></li>
-              <li><a href="pages/sidebar-left.html">Discapacidad Visual</a></li>
-            </ul>
-          </li>
-          <li><a href="#">Compra de Boletos</a></li>
-          <li><a href="#">Contacto</a></li>
-        </ul>
-      </nav>
-      <!-- ################################################################################################ -->
-    </header>
-  </div>
-
-  <div class="wrapper row3">
-    <section class="hoc container clear"> 
-      <!-- ################################################################################################ -->
-      <div class="sectiontitle">
-        <h3 class="heading">Ante leo bibendum</h3>
-        <p>Nec libero tempus sit amet aliquet enim dignissim suspendisse.</p>
-      </div>
-      <div class="clear"></div>
-    </section>
-  </div>
-
-     <div class="flexslider basicslider">
+  </nav>
+  
+  <div class="container">
+    <div id="inicio" class="col s12">
+      <h1>INCLUIR no es dejar pasar es dar la BIENVENIDA</h1>
+      <div class="slider">
         <ul class="slides">
-          <li><img src="images/banner/banner-1.jpg" height="120px" alt=""></li>
-          <li><img src="images/banner/banner-2.jpg" height="120px" alt=""></li>
-          <li><img src="images/banner/banner-3.jpg" height="120px" alt=""></li>
+          <li>
+            <img src="images/slider/slider-1.jpg"> <!-- random image -->
+            <div class="caption center-align">
+              <h3>This is our big Tagline!</h3>
+              <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+            </div>
+          </li>
+          <li>
+            <img src="images/slider/slider-2.jpg"> <!-- random image -->
+            <div class="caption left-align">
+              <h3>Left Aligned Caption</h3>
+              <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+            </div>
+          </li>
+          <li>
+            <img src="images/slider/slider-3.jpg"> <!-- random image -->
+            <div class="caption right-align">
+              <h3>Right Aligned Caption</h3>
+              <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+            </div>
+          </li>
         </ul>
       </div>
+    </div>
+    <div id="nosotros" class="col s12">Nosotros</div>
+    <div id="areas" class="col s12">Areas de juego</div>
+    <div id="compra_boletos" class="col s12">Compra de Boletos</div>
+    <div id="contacto" class="col s12">Contacto</div>  
+  </div>
+  
+  <footer class="page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Footer Content</h5>
+          <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">Links</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      © 2014 Copyright Text
+      <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+      </div>
+    </div>
+  </footer>
+        
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/materialize.min.js"></script>
 
-  <div style="height:190px;background-color:#92c8cf; background-image:url('images/footer.png')"></div>
+  <script type="text/javascript">
+    
+    $(document).ready(function(){
+      $('.slider').slider();
+    });
 
-  <a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
-  <!-- JAVASCRIPTS -->
-  <script src="layout/scripts/jquery.min.js"></script>
-  <script src="layout/scripts/jquery.backtotop.js"></script>
-  <script src="layout/scripts/jquery.mobilemenu.js"></script>
-  <script src="layout/scripts/jquery.flexslider-min.js"></script>
+    $(".dropdown-button").dropdown();
+  </script>
 </body>
 </html>
