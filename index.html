@@ -13,18 +13,18 @@
       <img src="images/logo-kids.png" alt="" class="col s9">
     </div>
     <ul id="dropdown1" class="dropdown-content">
-      <li><a href="#areas">Discapacidad Motriz</a></li>
-      <li><a href="#areas">Discapacidad Intelectual</a></li>
-      <li><a href="#areas">Discapacidad Visual</a></li>
+      <li><a onclick="show_page('discapacidad_motriz')">Discapacidad Motriz</a></li>
+      <li><a onclick="show_page('discapacidad_intelectual')">Discapacidad Intelectual</a></li>
+      <li><a onclick="show_page('discapacidad_visual')">Discapacidad Visual</a></li>
     </ul>
     <nav class="blue accent-1">
       <div class="nav-wrapper">
         <ul class="right hide-on-ls-and-down">
-          <li class="active"><a href="#inicio">Inicio</a></li>
-          <li><a href="#nosotros">Nosotros</a></li>
+          <li class="active"><a onclick="show_page('inicio')">Inicio</a></li>
+          <li><a onclick="show_page('nosotros')">Nosotros</a></li>
           <li><a class="dropdown-button" data-activates="dropdown1">Areas de juego</a></li>
-          <li><a href="#compra_boletos">Compra de Boletos</a></li>
-          <li><a href="#contacto">Contacto</a></li>
+          <li><a onclick="show_page('compra_boletos')">Compra de Boletos</a></li>
+          <li><a onclick="show_page('contacto')">Contacto</a></li>
         </ul>
       </div>
     </nav>
@@ -59,7 +59,7 @@
         </ul>
       </div>
     </div>
-    <div id="nosotros" class="col s12">
+    <div id="nosotros" class="col s12 hide">
       <h1>Nosotros</h1>
       <div class="row">
         <div class="col s6">
@@ -72,7 +72,7 @@
     </div>
     <div id="areas" class="col s12">
       
-      <div id="discapacidad-motriz">
+      <div id="discapacidad_motriz" class="hide">
           <div class="row">
             <h1>Discapacidad Motriz</h1>
           </div>
@@ -108,7 +108,7 @@
           </div>
       </div>
 
-      <div id="discapacidad-intelectual">
+      <div id="discapacidad_intelectual" class="hide">
           <div class="row">
             <h1>Discapacidad Intelectual</h1>
           </div>
@@ -147,7 +147,7 @@
           </div>
       </div>
 
-      <div id="discapacidad-visual">
+      <div id="discapacidad_visual" class="hide">
           <div class="row">
             <h1>Discapacidad Visual</h1>
           </div>
@@ -195,9 +195,9 @@
       </div>
     </div>
 
-    <div id="compra_boletos" class="col s12"><h1>Compra de Boleros</h1></div>
+    <div id="compra_boletos" class="col s12 hide" ><h1>Compra de Boletos</h1></div>
     
-    <div id="contacto" class="col s12">
+    <div id="contacto" class="col s12 hide">
       <h1>Contáctanos</h1>
       <div class="row">
         <div class="col s3">
@@ -266,15 +266,7 @@
         
   <script src="js/jquery-3.2.1.min.js"></script>
   <script src="js/materialize.min.js"></script>
+  <script src="js/index.js"></script>
 
-  <script type="text/javascript">
-    
-    $(document).ready(function(){
-      $('.slider').slider();
-    });
-
-    $(".dropdown-button").dropdown();
-
-  </script>
 </body>
 </html>
