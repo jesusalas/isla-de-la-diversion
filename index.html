@@ -200,7 +200,7 @@
        <nav>
         <div class="nav-wrapper">
           <div class="col s12">
-            <a href="#!" class="breadcrumb">Seleccionar Horario</a>
+            <a href="#!" class="breadcrumb">Seleccionar Boletos</a>
             <a href="#!" class="breadcrumb">Escoge tu lugar</a>
             <a href="#!" class="breadcrumb">Haz tu Pago</a>
             <a href="#!" class="breadcrumb">Confirma Compra</a>
@@ -216,38 +216,72 @@
           </div>
         </div>
       
-      <section class="">
-        <p>Selecciona Horario</p>
-        <input type="text" class="datepicker" placeholder="Día">
-        <table>
-          <tr>
-            <th>Cantidad</th>
-            <th></th>
-            <th>Costo</th>
-            <th>Subtotal</th>
-          </tr>
-          <tr>
-            <td>Publico General</td>
-            <td>
-              <a class="btn-floating waves-effect waves-light  blue darken-3 white-text center-align">-</a>
-              0
-              <a class="btn-floating waves-effect waves-light  blue darken-3 white-text center-align">+</a>
-            </td>
-            <td>50</td>
-            <td>0</td>
-          </tr>
-          <tr>
-            <td>Discapacitados</td>
-            <td>
-              <a class="btn-floating waves-effect waves-light  blue darken-3"><i class="material-icons">add</i></a>
-              0
-              <a class="btn-floating waves-effect waves-light  blue darken-3"><i class="material-icons">remove</i></a>
-            </td>
-            <td>50</td>
-            <td>0</td>
-          </tr>      
-        </table>
-
+      <section class="bordered">
+        <h5>Seleccionar Boletos</h5>
+        <div class="row">
+          <div class="col s3">Cantidad</div>
+          <div class="col s3 offset-s3">Costo</div>
+          <div class="col s3">Subtotal</div>
+        </div>
+        <div class="row">
+          <div class="col s3">Publico General</div>
+          <div class="col s3">
+            <a class="btn-floating waves-effect waves-light  blue darken-3 white-text center-align btn-outline">-</a>
+            0
+            <a class="btn-floating waves-effect waves-light  blue darken-3 white-text center-align">+</a>
+          </div>
+          <div class="col s3">$50.00</div>
+          <div class="col s3">0</div>
+        </div>
+        <div class="row">
+          <div class="col s3">Discapacitados</div>
+          <div class="col s3">
+            <a class="btn-floating waves-effect waves-light  blue darken-3 white-text center-align">-</a>
+            0
+            <a class="btn-floating waves-effect waves-light  blue darken-3 white-text center-align">+</a>
+          </div>
+          <div class="col s3">$30.00</div>
+          <div class="col s3">0</div>
+        </div>
+        <div class="row">
+          <div class="input-field col s6">
+            <i class="material-icons prefix">perm_contact_calendar</i>
+            <input type="text" class="datepicker" id="dia">
+            <label for="dia">Dia</label>
+          </div>
+        </div>
+        <div class="col s3">
+          <table class="bordered">
+            <thead>
+              <tr>
+                <th>Cantidad</th>
+                <th></th>
+                <th>Costo</th>
+                <th>Subtotal</th>
+              </tr>
+            </thead>
+            <tr>
+              <td>Publico General</td>
+              <td>
+                <a class="btn-floating waves-effect waves-light  blue darken-3 white-text center-align">-</a>
+                0
+                <a class="btn-floating waves-effect waves-light  blue darken-3 white-text center-align">+</a>
+              </td>
+              <td>$50.00</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>Discapacitados</td>
+              <td>
+                <a class="btn-floating waves-effect waves-light  blue darken-3"><i class="material-icons">add</i></a>
+                0
+                <a class="btn-floating waves-effect waves-light  blue darken-3"><i class="material-icons">remove</i></a>
+              </td>
+              <td>$30.00</td>
+              <td>0</td>
+            </tr>      
+          </table>
+        </div>
         <a class="waves-effect waves-light btn-large"><i class="material-icons right">navigate_next</i>Continuar</a>
       </section>
       <section>
