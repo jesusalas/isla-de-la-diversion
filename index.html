@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="css/materialize.min.css">
+  <link href="js/material-icons.js" rel="stylesheet">
   <title>Isla de la Diversion</title>
 </head>
 <body>
@@ -206,56 +207,167 @@
           </div>
         </div>
       </nav>
-      <input type="text" class="datepicker">
-      <p>Selecciona Horario</p>
-      <p>Para recoger los boletos es necesario que el titular presente la tarjeta de crédito con la que se hizo la compra e identificación oficial en taquilla y en compras mayores a $250 pesos se le solicitará firmar el comprobante bancario correspondiente.</p>
+      
+      <div class="col s3">
+          <div class="card-panel amber accent-3">
+            <span class="black-text">
+              Para recoger los boletos es necesario que el titular presente la tarjeta de crédito con la que se hizo la compra e identificación oficial en taquilla y en compras mayores a $250 pesos se le solicitará firmar el comprobante bancario correspondiente.
+            </span>
+          </div>
+        </div>
+      
+      <section class="">
+        <p>Selecciona Horario</p>
+        <input type="text" class="datepicker" placeholder="Día">
+        <table>
+          <tr>
+            <th>Cantidad</th>
+            <th></th>
+            <th>Costo</th>
+            <th>Subtotal</th>
+          </tr>
+          <tr>
+            <td>Publico General</td>
+            <td>
+              <a class="btn-floating waves-effect waves-light  blue darken-3 white-text center-align">-</a>
+              0
+              <a class="btn-floating waves-effect waves-light  blue darken-3 white-text center-align">+</a>
+            </td>
+            <td>50</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>Discapacitados</td>
+            <td>
+              <a class="btn-floating waves-effect waves-light  blue darken-3"><i class="material-icons">add</i></a>
+              0
+              <a class="btn-floating waves-effect waves-light  blue darken-3"><i class="material-icons">remove</i></a>
+            </td>
+            <td>50</td>
+            <td>0</td>
+          </tr>      
+        </table>
 
-      <table>
-        <tr>
-          <th>Cantidad</th>
-          <th></th>
-          <th>Costo</th>
-          <th>Subtotal</th>
-        </tr>
-        <tr>
-          <td>3 era Edad</td>
-          <td><button>-</button>0 <button>+</button> </td>
-          <td>50</td>
-          <td>0</td>
-        </tr>
-        <tr>
-          <td>Adultos</td>
-          <td><button>-</button>0 <button>+</button> </td>
-          <td>50</td>
-          <td>0</td>
-        </tr>
-        <tr>
-          <td>Niños</td>
-          <td><button>-</button>0 <button>+</button> </td>
-          <td>50</td>
-          <td>0</td>
-        </tr>
-       <tr>
-          <td>Discapacitados</td>
-          <td><button>-</button>0 <button>+</button> </td>
-          <td>50</td>
-          <td>0</td>
-        </tr>      
-      </table>
+        <a class="waves-effect waves-light btn-large"><i class="material-icons right">navigate_next</i>Continuar</a>
+      </section>
+      <section>
+        <h5>Seleccionar Discapacidad</h5>
+        <h6>Puede contemplar hasta 3 discapacidades</h6>
+        
 
+        <div class="row">
+          <div class="col s6 right-align">
+            <h6>Discapacidad Motriz</h6>
+          </div>
+          <div class="col s6 left-align">
+            <a class="btn-floating waves-effect waves-light  blue darken-3 white-text center-align">-</a>
+            0
+            <a class="btn-floating waves-effect waves-light  blue darken-3 white-text center-align">+</a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s6 right-align">
+            <h6>Discapacidad Intelectual</h6>
+          </div>
+          <div class="col s6 left-align">
+            <a class="btn-floating waves-effect waves-light  blue darken-3 white-text center-align">-</a>
+            0
+            <a class="btn-floating waves-effect waves-light  blue darken-3 white-text center-align">+</a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s6 right-align">
+            <h6>Discapacidad Visual</h6>
+          </div>
+          <div class="col s6 left-align">
+            <a class="btn-floating waves-effect waves-light  blue darken-3 white-text center-align">-</a>
+            0
+            <a class="btn-floating waves-effect waves-light  blue darken-3 white-text center-align">+</a>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="left">
+            <a class="waves-effect waves-light btn-large"><i class="material-icons left">navigate_before</i>Regresar</a>  
+          </div>
+          <div class="right">
+            <a class="waves-effect waves-light btn-large"><i class="material-icons right">navigate_next</i>Continuar</a>
+          </div>
+        </div>
+         
+      </section>
+      <section>
+        <h5>Seleccionar Metodo de Pago</h5>
+          <div class="row">
+            <div class="input-field col s6">
+              <input id="last_name" type="text" class="validate">
+              <label for="last_name">Nombre de Tarjetahabiente</label>
+            </div>
+          </div>
+          <div class="input-field col s6">
+            <input id="last_name" type="text" class="validate">
+            <label for="last_name">No de Tarjeta</label>
+          </div>
+          <div class="input-field col s6">
+            <input id="last_name" type="text" class="validate">
+            <label for="last_name">Codigo de Seguridad de la Tarjeta</label>
+          </div>
+          <div class="row">
+            <div class="input-field col s6">
+              <select>
+                <option value="" disabled selected>Choose your option</option>
+                <option value="1">Option 1</option>
+                <option value="2">Option 2</option>
+                <option value="3">Option 3</option>
+              </select>
+              <label>Fecha de Vencimiento</label>
+            </div>
+            <div class="input-field col s3">
+              <select>
+                <option value="" disabled selected>Choose your option</option>
+                <option value="1">Option 1</option>
+                <option value="2">Option 2</option>
+                <option value="3">Option 3</option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s6">
+              <select>
+                <option value="" disabled selected>Choose your option</option>
+                <option value="1">Visa</option>
+                <option value="2"></option>
+                <option value="3">Option 3</option>
+              </select>
+              <label>Tipo de Tarjeta</label>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="email" type="email" class="validate">
+              <label for="email">Email</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="left">
+              <a class="waves-effect waves-light btn-large"><i class="material-icons left">navigate_before</i>Regresar</a>  
+            </div>
+            <div class="right">
+              <a class="waves-effect waves-light btn-large"><i class="material-icons right">send</i>Pagar</a>
+            </div>
+          </div>
+      </section>
+      <section>
+        
+      </section>
 
     </div>
     
     <div id="contacto" class="col s12 hide">
       <h1>Contáctanos</h1>
       <div class="row">
-        <div class="col s3">
-          <div class="card-panel teal">
-            <span class="white-text">I am a very simple card. I am good at containing small bits of information.
-            I am convenient because I require little markup to use effectively. I am similar to what is called a panel in other frameworks.
-            </span>
-          </div>
-        </div>
+         
         <form class="col s9">
           <div class="row">
             <div class="input-field col s12">
