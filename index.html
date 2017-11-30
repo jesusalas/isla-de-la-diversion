@@ -216,115 +216,141 @@
           </div>
         </div>
       
-      <section class="bordered">
-        <h5>Seleccionar Boletos</h5>
-        <div class="row">
-          <div class="col s3">Cantidad</div>
-          <div class="col s3 offset-s3">Costo</div>
-          <div class="col s3">Subtotal</div>
-        </div>
-        <div class="row">
-          <div class="col s3">Publico General</div>
-          <div class="col s3">
-            <a class="btn-floating waves-effect waves-light  blue darken-3 white-text center-align btn-outline">-</a>
-            0
-            <a class="btn-floating waves-effect waves-light  blue darken-3 white-text center-align">+</a>
-          </div>
-          <div class="col s3">$50.00</div>
-          <div class="col s3">0</div>
-        </div>
-        <div class="row">
-          <div class="col s3">Discapacitados</div>
-          <div class="col s3">
-            <a class="btn-floating waves-effect waves-light  blue darken-3 white-text center-align">-</a>
-            0
-            <a class="btn-floating waves-effect waves-light  blue darken-3 white-text center-align">+</a>
-          </div>
-          <div class="col s3">$30.00</div>
-          <div class="col s3">0</div>
-        </div>
-        <div class="row">
+      <div class="row">
           <div class="input-field col s6">
             <i class="material-icons prefix">perm_contact_calendar</i>
             <input type="text" class="datepicker" id="dia">
             <label for="dia">Dia</label>
           </div>
+
+          <div class="col s6">
+            <div class="col s6 right-align">
+              <h6>Total</h6>
+              <h6>Publico General</h6>  
+              <h6>Discapacitados </h6>
+            </div>
+            <div class="col s6">
+              <h6>$150.00</h6>
+              <h6 id="publico_total">0</h6>  
+              <h6 id="discapacitado_total">0</h6>
+            </div>
+          </div>
         </div>
-        <div class="col s3">
-          <table class="bordered">
-            <thead>
-              <tr>
-                <th>Cantidad</th>
-                <th></th>
-                <th>Costo</th>
-                <th>Subtotal</th>
-              </tr>
-            </thead>
+
+      <section>
+        <h5>Seleccionar Boletos</h5>
+        
+        <table class="highlight">
+          <thead>
             <tr>
-              <td>Publico General</td>
-              <td>
-                <a class="btn-floating waves-effect waves-light  blue darken-3 white-text center-align">-</a>
-                0
-                <a class="btn-floating waves-effect waves-light  blue darken-3 white-text center-align">+</a>
-              </td>
-              <td>$50.00</td>
-              <td>0</td>
+              <th></th>
+              <th></th>
+              <th>Cantidad</th>
+              <th></th>
+              <th>Costo</th>
+              <th>Subtotal</th>
             </tr>
-            <tr>
-              <td>Discapacitados</td>
-              <td>
-                <a class="btn-floating waves-effect waves-light  blue darken-3"><i class="material-icons">add</i></a>
-                0
-                <a class="btn-floating waves-effect waves-light  blue darken-3"><i class="material-icons">remove</i></a>
-              </td>
-              <td>$30.00</td>
-              <td>0</td>
-            </tr>      
-          </table>
+          </thead>
+          <tr>
+            <td>Publico General</td>
+            <td>
+              <a id="btn_publico_remove" onclick="change_tickets('publico_value','remove')" class="btn-floating waves-effect waves-light  blue darken-3 white-text center-align">-</a>
+            </td>
+            <td>
+              <p id="publico_value">0</p>
+            </td>
+            <td>  
+              <a id="btn_publico_add" onclick="change_tickets('publico_value','add')" class="btn-floating waves-effect waves-light  blue darken-3 white-text center-align">+</a>
+            </td>
+            <td>$50.00</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>Discapacitados</td>
+            <td>
+              <a id="btn_discapacitados_remove" onclick="change_tickets('discapacitado_value','remove')" class="btn-floating waves-effect waves-light  blue darken-3 white-text center-align">-</a>
+            </td>
+            <td>
+              <p id="discapacitado_value">0</p>
+            </td>
+            <td>
+              <a id="btn_discapacitados_add" onclick="change_tickets('discapacitado_value','add')" class="btn-floating waves-effect waves-light  blue darken-3 white-text center-align">+</a>
+            </td>
+            <td>$30.00</td>
+            <td>0</td>
+          </tr>      
+        </table>
+        <div class="row right">
+          <div class="col s12">
+            <a class="waves-effect waves-light btn-large"><i class="material-icons right">navigate_next</i>Continuar</a>
+          </div>
         </div>
-        <a class="waves-effect waves-light btn-large"><i class="material-icons right">navigate_next</i>Continuar</a>
       </section>
       <section>
-        <h5>Seleccionar Discapacidad</h5>
-        <h6>Puede contemplar hasta 3 discapacidades</h6>
+        <div class="row">
+          <div class="col s12">
+            <h5>Seleccionar Discapacidad</h5>
+          </div>
+        </div>
         
+        <table class="highlight">
+          <thead>
+            <tr>
+              <th>Discapacidad</th>
+              <th></th>
+              <th>Cantidad</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tr>
+            <td>
+              <h6>Discapacidad Motriz</h6>
+            </td>
+            <td>
+              <a id="btn_motriz_remove" onclick="change_dishability('motriz_quantity','remove')" class="btn-floating waves-effect waves-light  blue darken-3 white-text center-align">-</a>
+            </td>
+            <td>
+              <p id="motriz_quantity">0</p>
+            </td>
+            <td>
+              <a id="btn_motriz_add" onclick="change_dishability('motriz_quantity','add')" class="btn-floating waves-effect waves-light  blue darken-3 white-text center-align">+</a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <h6>Discapacidad Intelectual</h6>
+            </td>
+            <td>
+              <a id="btn_intelectual_remove" onclick="change_dishability('intelectual_quantity','remove')" class="btn-floating waves-effect waves-light  blue darken-3 white-text center-align">-</a>
+            </td>
+            <td>
+              <p id="intelectual_quantity">0</p>
+            </td>
+            <td>
+              <a id="btn_intelectual_add" onclick="change_dishability('intelectual_quantity','add')" class="btn-floating waves-effect waves-light  blue darken-3 white-text center-align">+</a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <h6>Discapacidad Visual</h6>
+            </td>
+            <td>
+              <a id="btn_visual_remove" onclick="change_dishability('visual_quantity','remove')" class="btn-floating waves-effect waves-light  blue darken-3 white-text center-align">-</a>
+            </td>
+            <td>
+              <p id="visual_quantity">0</p>
+            </td>
+            <td>
+              <a id="btn_visual_add" onclick="change_dishability('visual_quantity','add')" class="btn-floating waves-effect waves-light  blue darken-3 white-text center-align">+</a>
+            </td>
+          </tr>
+        </table>
 
         <div class="row">
-          <div class="col s6 right-align">
-            <h6>Discapacidad Motriz</h6>
-          </div>
-          <div class="col s6 left-align">
-            <a class="btn-floating waves-effect waves-light  blue darken-3 white-text center-align">-</a>
-            0
-            <a class="btn-floating waves-effect waves-light  blue darken-3 white-text center-align">+</a>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col s6 right-align">
-            <h6>Discapacidad Intelectual</h6>
-          </div>
-          <div class="col s6 left-align">
-            <a class="btn-floating waves-effect waves-light  blue darken-3 white-text center-align">-</a>
-            0
-            <a class="btn-floating waves-effect waves-light  blue darken-3 white-text center-align">+</a>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col s6 right-align">
-            <h6>Discapacidad Visual</h6>
-          </div>
-          <div class="col s6 left-align">
-            <a class="btn-floating waves-effect waves-light  blue darken-3 white-text center-align">-</a>
-            0
-            <a class="btn-floating waves-effect waves-light  blue darken-3 white-text center-align">+</a>
-          </div>
-        </div>
-        
-        <div class="row">
-          <div class="left">
+          <div class="col s6 left">
             <a class="waves-effect waves-light btn-large"><i class="material-icons left">navigate_before</i>Regresar</a>  
           </div>
-          <div class="right">
+          <div class="col s6 right">
             <a class="waves-effect waves-light btn-large"><i class="material-icons right">navigate_next</i>Continuar</a>
           </div>
         </div>
