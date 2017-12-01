@@ -27,7 +27,20 @@ var discapacidad_visual = document.getElementById('discapacidad_visual');
 var compra_boletos = document.getElementById('compra_boletos');
 var contacto = document.getElementById('contacto');
 
+var total = document.getElementById('total');
+var publico_total = document.getElementById('publico_total');
+var discapacitado_total = document.getElementById('discapacitado_total');
 
+var publico_quantity = document.getElementById('publico_quantity');
+var publico_price = document.getElementById('publico_price');
+var publico_subtotal = document.getElementById('publico_subtotal');
+var discapacitado_quantity = document.getElementById('discapacitado_quantity');
+var discapacitado_price = document.getElementById('discapacitado_price');
+var discapacitado_subtotal = document.getElementById('discapacitado_subtotal');
+
+var motriz_quantity = document.getElementById("motriz_quantity");
+var intelectual_quantity = document.getElementById("intelectual_quantity");
+var visual_quantity = document.getElementById("visual_quantity");
 
 function show_page(page){
 	inicio.classList.add('hide');
@@ -57,23 +70,36 @@ function change_tickets(element, operation){
 	}
 
 
-	if (element == "publico_value"){
-		document.getElementById('publico_value').innerHTML = value;
-		document.getElementById('publico_total').innerHTML = value;
+	if (element == "publico_quantity"){
+		publico_quantity.innerHTML = value;
+		publico_subtotal.innerHTML = value * parseFloat(publico_price.innerHTML);
 	}else{
-		document.getElementById('discapacitado_value').innerHTML = value;
-		document.getElementById('discapacitado_total').innerHTML = value;
+		discapacitado_quantity.innerHTML = value;
+		discapacitado_subtotal.innerHTML = value * parseFloat(discapacitado_price.innerHTML);
 	}
 
+}
+
+function continue_to_dishability(){
+	var limit = parseInt(publico_quantity.innerHTML) + parseInt(discapacitado_quantity.innerHTML);
+
+	if (limit <= 0){
+		alert("Para continuar debes seleccionar minimo un boleto");
+	}else{
+
+		total.innerHTML = parseFloat(publico_subtotal.innerHTML) + parseFloat(discapacitado_subtotal.innerHTML);
+		publico_total.innerHTML = publico_quantity.innerHTML;
+		discapacitado_total.innerHTML = discapacitado_quantity.innerHTML;
+	}
 }
 
 function change_dishability(element, operation){
 	
 	var value = document.getElementById(element).innerHTML;
-	var limit = document.getElementById("discapacitado_total").innerHTML;
-	var motriz = document.getElementById("motriz_quantity").innerHTML;
-	var intelectual = document.getElementById("intelectual_quantity").innerHTML;
-	var visual = document.getElementById("visual_quantity").innerHTML;
+	var limit = discapacitado_total.innerHTML;
+	var motriz = motriz_quantity.innerHTML;
+	var intelectual = intelectual_quantity.innerHTML;
+	var visual = visual_quantity.innerHTML;
 
 	var total = parseInt(motriz) + parseInt(intelectual) + parseInt(visual);
 

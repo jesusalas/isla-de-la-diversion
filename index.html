@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="css/materialize.min.css">
-  <link href="js/material-icons.js" rel="stylesheet">
+  <link href="css/material-icons.css" rel="stylesheet">
   <title>Isla de la Diversion</title>
 </head>
 <body>
@@ -197,7 +197,7 @@
     <div id="compra_boletos" class="col s12 hide" >
       <h1>Compra de Boletos</h1>
       
-       <nav>
+      <nav>
         <div class="nav-wrapper">
           <div class="col s12">
             <a href="#!" class="breadcrumb">Seleccionar Boletos</a>
@@ -209,33 +209,33 @@
       </nav>
       
       <div class="col s3">
-          <div class="card-panel amber accent-3">
-            <span class="black-text">
-              Para recoger los boletos es necesario que el titular presente la tarjeta de crédito con la que se hizo la compra e identificación oficial en taquilla y en compras mayores a $250 pesos se le solicitará firmar el comprobante bancario correspondiente.
-            </span>
-          </div>
+        <div class="card-panel amber accent-3">
+          <span class="black-text">
+            Para recoger los boletos es necesario que el titular presente la tarjeta de crédito con la que se hizo la compra e identificación oficial en taquilla y en compras mayores a $250 pesos se le solicitará firmar el comprobante bancario correspondiente.
+          </span>
         </div>
+      </div>
       
       <div class="row">
-          <div class="input-field col s6">
-            <i class="material-icons prefix">perm_contact_calendar</i>
-            <input type="text" class="datepicker" id="dia">
-            <label for="dia">Dia</label>
-          </div>
+        <div class="input-field col s6">
+          <i class="material-icons prefix">perm_contact_calendar</i>
+          <input type="text" class="datepicker" id="dia">
+          <label for="dia">Dia</label>
+        </div>
 
+        <div class="col s6">
+          <div class="col s6 right-align">
+            <h6>Total</h6>
+            <h6>Publico General</h6>  
+            <h6>Discapacitados </h6>
+          </div>
           <div class="col s6">
-            <div class="col s6 right-align">
-              <h6>Total</h6>
-              <h6>Publico General</h6>  
-              <h6>Discapacitados </h6>
-            </div>
-            <div class="col s6">
-              <h6>$150.00</h6>
-              <h6 id="publico_total">0</h6>  
-              <h6 id="discapacitado_total">0</h6>
-            </div>
+            <h6 id="total">0</h6>
+            <h6 id="publico_total">0</h6>  
+            <h6 id="discapacitado_total">0</h6>
           </div>
         </div>
+      </div>
 
       <section>
         <h5>Seleccionar Boletos</h5>
@@ -254,35 +254,35 @@
           <tr>
             <td>Publico General</td>
             <td>
-              <a id="btn_publico_remove" onclick="change_tickets('publico_value','remove')" class="btn-floating waves-effect waves-light  blue darken-3 white-text center-align">-</a>
+              <a onclick="change_tickets('publico_quantity','remove')" class="btn-floating waves-effect waves-light  blue darken-3 white-text center-align">-</a>
             </td>
             <td>
-              <p id="publico_value">0</p>
+              <p id="publico_quantity">0</p>
             </td>
             <td>  
-              <a id="btn_publico_add" onclick="change_tickets('publico_value','add')" class="btn-floating waves-effect waves-light  blue darken-3 white-text center-align">+</a>
+              <a onclick="change_tickets('publico_quantity','add')" class="btn-floating waves-effect waves-light  blue darken-3 white-text center-align">+</a>
             </td>
-            <td>$50.00</td>
-            <td>0</td>
+            <td id="publico_price">50</td>
+            <td id="publico_subtotal">0</td>
           </tr>
           <tr>
             <td>Discapacitados</td>
             <td>
-              <a id="btn_discapacitados_remove" onclick="change_tickets('discapacitado_value','remove')" class="btn-floating waves-effect waves-light  blue darken-3 white-text center-align">-</a>
+              <a onclick="change_tickets('discapacitado_quantity','remove')" class="btn-floating waves-effect waves-light  blue darken-3 white-text center-align">-</a>
             </td>
             <td>
-              <p id="discapacitado_value">0</p>
+              <p id="discapacitado_quantity">0</p>
             </td>
             <td>
-              <a id="btn_discapacitados_add" onclick="change_tickets('discapacitado_value','add')" class="btn-floating waves-effect waves-light  blue darken-3 white-text center-align">+</a>
+              <a onclick="change_tickets('discapacitado_quantity','add')" class="btn-floating waves-effect waves-light  blue darken-3 white-text center-align">+</a>
             </td>
-            <td>$30.00</td>
-            <td>0</td>
+            <td id="discapacitado_price">30</td>
+            <td id="discapacitado_subtotal">0</td>
           </tr>      
         </table>
         <div class="row right">
           <div class="col s12">
-            <a class="waves-effect waves-light btn-large"><i class="material-icons right">navigate_next</i>Continuar</a>
+            <a onclick="continue_to_dishability()" class="waves-effect waves-light btn-large"><i class="material-icons right">navigate_next</i>Continuar</a>
           </div>
         </div>
       </section>
@@ -362,7 +362,7 @@
           <div class="input-field col s12 m6">
             <select class="icons">
               <option value="" disabled selected>Escoge tu Tarjeta</option>
-              <option value="" data-icon="images/visa.svg" class="right circle">Visa</option>
+              <option value="" data-icon="images/visa.png" class="right circle">Visa</option>
               <option value="" data-icon="images/master-card.png" class="right circle">Master Card</option>
               <option value="" data-icon="images/american-express.png" class="right circle">American Express</option>
             </select>
