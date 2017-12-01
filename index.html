@@ -358,65 +358,86 @@
       </section>
       <section>
         <h5>Seleccionar Metodo de Pago</h5>
-          <div class="row">
-            <div class="input-field col s6">
-              <input id="last_name" type="text" class="validate">
-              <label for="last_name">Nombre de Tarjetahabiente</label>
-            </div>
+        <div class="row">
+          <div class="input-field col s12 m6">
+            <select class="icons">
+              <option value="" disabled selected>Escoge tu Tarjeta</option>
+              <option value="" data-icon="images/visa.svg" class="right circle">Visa</option>
+              <option value="" data-icon="images/master-card.png" class="right circle">Master Card</option>
+              <option value="" data-icon="images/american-express.png" class="right circle">American Express</option>
+            </select>
+            <label>Tipo de Tarjeta</label>
           </div>
-          <div class="input-field col s6">
+        </div>
+        <div class="row">
+          <div class="input-field col l6 m6 s12">
             <input id="last_name" type="text" class="validate">
-            <label for="last_name">No de Tarjeta</label>
+            <label for="last_name">Nombre de Tarjetahabiente</label>
           </div>
-          <div class="input-field col s6">
-            <input id="last_name" type="text" class="validate">
-            <label for="last_name">Codigo de Seguridad de la Tarjeta</label>
+        </div>
+        <div class="row">
+          <div class="input-field col l3 m3 s12">
+            <input id="last_name" type="number" data-length="12" class="validate">
+            <label for="last_name" data-error="Tarjeta inválida">No de Tarjeta</label>
           </div>
-          <div class="row">
-            <div class="input-field col s6">
-              <select>
-                <option value="" disabled selected>Choose your option</option>
-                <option value="1">Option 1</option>
-                <option value="2">Option 2</option>
-                <option value="3">Option 3</option>
-              </select>
-              <label>Fecha de Vencimiento</label>
-            </div>
-            <div class="input-field col s3">
-              <select>
-                <option value="" disabled selected>Choose your option</option>
-                <option value="1">Option 1</option>
-                <option value="2">Option 2</option>
-                <option value="3">Option 3</option>
-              </select>
-            </div>
+          <div class="input-field col l3 m3 s12">
+            <input id="last_name" type="number" data-length="4" class="validate">
+            <label for="last_name" data-error="Código Invalido">Codigo de Seguridad</label>
           </div>
-          <div class="row">
-            <div class="input-field col s6">
-              <select>
-                <option value="" disabled selected>Choose your option</option>
-                <option value="1">Visa</option>
-                <option value="2"></option>
-                <option value="3">Option 3</option>
-              </select>
-              <label>Tipo de Tarjeta</label>
-            </div>
+        </div>
+        <div class="row">
+          <div class="input-field col l6 m3 s12">
+            <input id="email" type="email" class="validate">
+            <label for="email" data-error="Correo Invalido">Email</label>
           </div>
-
-          <div class="row">
-            <div class="input-field col s12">
-              <input id="email" type="email" class="validate">
-              <label for="email">Email</label>
-            </div>
+        </div>
+        <div class="row">
+          <div class="input-field col l3 m3 s12">
+            <select>
+              <option value="" disabled selected>Mes</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+            </select>
+            <label>Fecha de Vencimiento</label>
           </div>
-          <div class="row">
-            <div class="left">
-              <a class="waves-effect waves-light btn-large"><i class="material-icons left">navigate_before</i>Regresar</a>  
-            </div>
-            <div class="right">
-              <a class="waves-effect waves-light btn-large"><i class="material-icons right">send</i>Pagar</a>
-            </div>
+          <div class="input-field col l3 m3 s12">
+            <select>
+              <option value="" disabled selected>Año</option>
+              <option value="2017">2017</option>
+              <option value="2018">2018</option>
+              <option value="2019">2019</option>
+              <option value="2020">2020</option>
+              <option value="2021">2021</option>
+              <option value="2022">2022</option>
+              <option value="2023">2023</option>
+              <option value="2024">2024</option>
+              <option value="2025">2025</option>
+              <option value="2026">2026</option>
+              <option value="2027">2027</option>
+              <option value="2028">2028</option>
+              <option value="2029">2029</option>
+            </select>
           </div>
+        </div>
+        <div class="row">
+          <div class="left">
+            <a class="waves-effect waves-light btn-large"><i class="material-icons left">navigate_before</i>Regresar</a>  
+          </div>
+          <div class="right">
+            <a class="waves-effect waves-light btn-large"><i class="material-icons right">send</i>Pagar</a>
+          </div>
+        </div>
+      
       </section>
       <section>
         
