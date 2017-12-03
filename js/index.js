@@ -118,6 +118,23 @@ function change_dishability(element, operation){
 
 }
 
+function back_to_tickets(){
+	motriz_quantity.innerHTML = 0;
+	intelectual_quantity.innerHTML = 0;
+	visual_quantity.innerHTML = 0;
+}
+
+function continue_to_payment(){
+	var dishability_total = parseInt(discapacitado_total.innerHTML); 
+	var dishability_selected = parseInt(motriz_quantity.innerHTML) + parseInt(intelectual_quantity.innerHTML) + parseInt(visual_quantity.innerHTML);
+
+	if (dishability_total != dishability_selected){
+		alert("Para continuar debes especificar todas las discapacidades");
+	}else{
+		alert("es hora de pagar");
+	}
+}
+
 function muestra(){
 	var value = document.getElementById('motriz_quantity').innerHTML;
 	alert(value);
