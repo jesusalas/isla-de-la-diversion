@@ -197,25 +197,6 @@
     <div id="compra_boletos" class="col s12 hide" >
       <h1>Compra de Boletos</h1>
       
-      <nav>
-        <div class="nav-wrapper">
-          <div class="col s12">
-            <a href="#!" class="breadcrumb">Seleccionar Boletos</a>
-            <a href="#!" class="breadcrumb">Escoge tu lugar</a>
-            <a href="#!" class="breadcrumb">Haz tu Pago</a>
-            <a href="#!" class="breadcrumb">Confirma Compra</a>
-          </div>
-        </div>
-      </nav>
-      
-      <div class="col s3">
-        <div class="card-panel amber accent-3">
-          <span class="black-text">
-            Para recoger los boletos es necesario que el titular presente la tarjeta de crédito con la que se hizo la compra e identificación oficial en taquilla y en compras mayores a $250 pesos se le solicitará firmar el comprobante bancario correspondiente.
-          </span>
-        </div>
-      </div>
-      
       <div id="ticket_detail" class="row">
         <div class="input-field col s6">
           <i class="material-icons prefix">perm_contact_calendar</i>
@@ -234,6 +215,15 @@
             <h6 id="publico_total">0</h6>  
             <h6 id="discapacitado_total">0</h6>
           </div>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col s12 center">
+          <a id="step_tickets" class="waves-effect waves-light btn blue darken-2 white-text center-align"><i class="material-icons right">navigate_next</i>Seleccionar Boletos</a>
+          <a id="step_dishability" class="waves-effect waves-light btn  blue darken-2 white-text center-align disabled"><i class="material-icons right">navigate_next</i>Seleccionar Discapacidad</a>
+          <a id="step_payment" class="waves-effect waves-light btn  blue darken-2 white-text center-align disabled"><i class="material-icons right">navigate_next</i>Haz tu Pago</a>
+          <a id="step_successful" class="waves-effect waves-light btn  blue darken-2 white-text center-align disabled">Descargar Compra</a>
         </div>
       </div>
 
@@ -433,15 +423,18 @@
               <a onclick="back_to_dishability()" class="waves-effect waves-light btn-large"><i class="material-icons left">navigate_before</i>Regresar</a>  
             </div>
             <div class="right">
-              <button onclick="pay()" class="waves-effect waves-light btn-large"><i class="material-icons right">send</i>Pagar</button>
+              <button onclick="continue_to_successful()" class="waves-effect waves-light btn-large"><i class="material-icons right">send</i>Pagar</button>
             </button>
             </div>
           </div>
       </section>
       <section id="section_successful" class="hide">
         <div class="row">
-          <div class="col s12">
+          <div class="col s6">
             <a href="ticket.html" target="_blank"><i class="material-icons left">file_download</i>Descargar Boleto</a>
+          </div>
+          <div class="col s6">
+            <a href="index.html"><i class="material-icons left">autorenew</i>Nueva compra</a>
           </div>
         </div>
         <div class="row">

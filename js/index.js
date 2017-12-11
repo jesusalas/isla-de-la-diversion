@@ -47,6 +47,11 @@ var section_dishability = document.getElementById("section_dishability");
 var section_payment = document.getElementById("section_payment");
 var section_successful = document.getElementById("section_successful");
 
+var step_tickets = document.getElementById("step_tickets");
+var step_dishability = document.getElementById("step_dishability");
+var step_payment = document.getElementById("step_payment");
+var step_successful = document.getElementById("step_successful");
+
 function show_page(page){
 	inicio.classList.add('hide');
 	nosotros.classList.add('hide');
@@ -95,6 +100,7 @@ function continue_to_dishability(){
 		publico_total.innerHTML = publico_quantity.innerHTML;
 		discapacitado_total.innerHTML = discapacitado_quantity.innerHTML;
 		show_section("section_dishability");
+		show_step("step_dishability");
 	}
 
 }
@@ -130,6 +136,7 @@ function back_to_tickets(){
 	visual_quantity.innerHTML = 0;
 
 	show_section("section_tickets");
+	show_step("step_tickets");
 }
 
 function continue_to_payment(){
@@ -139,16 +146,32 @@ function continue_to_payment(){
 	if (dishability_total != dishability_selected){
 		alert("Para continuar debes especificar todas las discapacidades");
 	}else{
-		show_section("section_payment");	
+		show_section("section_payment");
+		show_step("step_payment");
 	}
 
 	
 }
 
-function pay(){
+function back_to_dishability(){
+	show_section("section_dishability");
+	show_step("step_dishability");
+}
+
+function continue_to_successful(){
 	var tarjeta = document.getElementById("tarjeta").value;
   	var dia = document.getElementById("dia").value;
   	var folio = localStorage.getItem("Folio");
+
+  	if (dia == ""){
+  		alert("Para finalizar la compra debes seleccionar un día");
+  		return;
+  	}
+
+  	if (tarjeta == "default"){
+  		alert("Favor de seleccionar un tipo de tarjeta válido");
+  		return;
+  	}
 
   	if (folio == null){
 		localStorage.setItem("Folio", "1");
@@ -167,14 +190,7 @@ function pay(){
     var ticket_detail = document.getElementById("ticket_detail");
     ticket_detail.classList.add('hide');
     show_section("section_successful");
-}
-
-function back_to_dishability(){
-	show_section("section_dishability");
-}
-
-function continue_to_successful(){
-
+    show_step("step_successful");
 }
 
 function show_section(section){
@@ -182,7 +198,17 @@ function show_section(section){
 	section_dishability.classList.add('hide');
 	section_payment.classList.add('hide');
 	section_successful.classList.add('hide');
-	var pagina = document.getElementById(section);
+	var section = document.getElementById(section);
 
-	pagina.classList.remove('hide');
+	section.classList.remove('hide');
+}
+
+function show_step(step){
+	step_tickets.classList.add('disabled');
+	step_dishability.classList.add('disabled');
+	step_payment.classList.add('disabled');
+	step_successful.classList.add('disabled');
+	var step = document.getElementById(step);
+
+	step.classList.remove('disabled');
 }
