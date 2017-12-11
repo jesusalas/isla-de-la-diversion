@@ -10,8 +10,13 @@
   
   <div class="container">
     <div class="row">
-      <img src="images/logo.png" alt="" class="col s3">
-      <img src="images/logo-kids.png" alt="" class="col s9">
+      <div class="col s3 center">
+        <br>
+        <img src="images/logo.png" class="responsive-img">
+      </div>
+      <div class="col s9 center">
+        <img src="images/logo-kids.png" class="responsive-img" height="180px" width="650px">
+      </div>
     </div>
     <ul id="dropdown1" class="dropdown-content">
       <li><a onclick="show_page('discapacidad_motriz')">Discapacidad Motriz</a></li>
@@ -31,7 +36,13 @@
     </nav>
 
     <div id="inicio" class="col s12">
-      <h1>INCLUIR no es dejar pasar es dar la BIENVENIDA</h1>
+      <div class="row ">
+        <div class="col l6 m6 s12 offset-l3 offset-m3 center blue">
+          <h2>INCLUIR</h2>
+          <h2>no es dejar pasar es dar la</h2>
+          <h2>BIENVENIDA</h2>
+        </div>
+      </div>
       <div class="slider">
         <ul class="slides">
           <li>
@@ -59,14 +70,13 @@
       </div>
     </div>
     <div id="nosotros" class="col s12 hide">
-      <h1>Nosotros</h1>
+      <h3 class="col s12 header center">Nosotros</h3>
       <div class="row">
-        <div class="col s6">
-          <img class="resposinve-img" src="images/nosotros.webp" alt="">
+        <div class="col l6 m6 s12 center">
+          <img src="images/nosotros.webp" class="responsive-img">
         </div>
-        <div class="col s6">
-          <p>Contempla las necesidades especiales de los niños con discapacidad, no sólo favoreciendo su participación, sino también la integración e inclusión en la vida normalizada, además de la sensibilización, puesto que también se estará contribuyendo a cambiar la percepción y actitudes que la sociedad en general tiene hacia ellos.</p>
-        </div>
+        <p class="flow-text col l6 m6 s12 center">Islas de la diversion</p>
+        <p class="flow-text col l6 m6 s12 right">Contempla las necesidades especiales de los niños con discapacidad, no sólo favoreciendo su participación, sino también la integración e inclusión en la vida normalizada, además de la sensibilización, puesto que también se estará contribuyendo a cambiar la percepción y actitudes que la sociedad en general tiene hacia ellos.</p>
       </div>
     </div>
     <div id="areas" class="col s12">
@@ -443,44 +453,54 @@
           </div> 
         </div>
       </section>
-
     </div>
     
     <div id="contacto" class="col s12 hide">
-      <h1>Contáctanos</h1>
-      <div class="row">
-         
-        <form class="col s9">
-          <div class="row">
-            <div class="input-field col s12">
-              <input id="nombre" type="text" class="validate">
-              <label for="nombre">Nombre</label>
-            </div>
-          </div>
-          <div class="row">
-            <div class="input-field col s12">
-              <input id="email" type="email" class="validate">
-              <label for="email" data-error="la cagas mi chavo">Email</label>
-            </div>
-          </div>
-            <div class="input-field col s12">
-              <input id="password" type="text" class="validate">
-              <label for="password">Asunto</label>
-            </div>
-          <div class="row">
-            <div class="input-field col s12">
-              <textarea id="textarea1" class="materialize-textarea"></textarea>
-              <label for="textarea1">Textarea</label>
-            </div>
-          </div>
-        </form>
-      </div>
+      <h3 class="col s12 header center">Contáctanos</h3>
       <div class="row">
         <div class="col s3">
-          <div class="card-panel teal">
-            <span class="white-text">I am a very simple card. I am good at containing small bits of information.
-            I am convenient because I require little markup to use effectively. I am similar to what is called a panel in other frameworks.
-            </span>
+          <div class="card-panel teal accent-4">
+            <h5 class="white-text">Siguenos en Facebook</h5>
+            <h5>Para saber de noticias, eventos y ofertas especiales</h5>
+          </div>
+        </div>
+        <div class="col s9">
+          <form class="col s8 center">
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="nombre" type="text" class="validate">
+                <label for="nombre">Nombre</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="email" type="email" class="validate">
+                <label for="email" data-error="la cagas mi chavo">Email</label>
+              </div>
+            </div>
+              <div class="input-field col s12">
+                <input id="password" type="text" class="validate">
+                <label for="password">Asunto</label>
+              </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <textarea id="textarea1" class="materialize-textarea"></textarea>
+                <label for="textarea1">Textarea</label>
+              </div>
+            </div>
+          </form>
+        </div> 
+        
+      </div>
+      <div class="row">
+        <div class="col s3 center">
+          <div class="card-panel amber lighten-2">
+            <h5 class="white-text">Visitanos</h5>
+            <h6>Av. Libramiento 2, frente al CUM</h6>
+            <h5 class="white-text">Llamanos</h5>
+            <h6>914-135-288</h6>
+            <h5 class="white-text">Escribenos</h5>
+            <h6>islasdeladiversion@gmail.com</h6>
           </div>
         </div>
         <div class="col s9">
