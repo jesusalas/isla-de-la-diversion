@@ -216,7 +216,7 @@
         </div>
       </div>
       
-      <div class="row">
+      <div id="ticket_detail" class="row">
         <div class="input-field col s6">
           <i class="material-icons prefix">perm_contact_calendar</i>
           <input type="text" class="datepicker" id="dia">
@@ -237,7 +237,7 @@
         </div>
       </div>
 
-      <section>
+      <section id="section_tickets">
         <h5>Seleccionar Boletos</h5>
         
         <table class="highlight">
@@ -280,13 +280,13 @@
             <td id="discapacitado_subtotal">0</td>
           </tr>      
         </table>
-        <div class="row right">
-          <div class="col s12">
+        <div class="row">
+          <div class="col s12 right">
             <a onclick="continue_to_dishability()" class="waves-effect waves-light btn-large"><i class="material-icons right">navigate_next</i>Continuar</a>
           </div>
         </div>
       </section>
-      <section>
+      <section id="section_dishability" class="hide">
         <div class="row">
           <div class="col s12">
             <h5>Seleccionar Discapacidad</h5>
@@ -354,36 +354,34 @@
             <a onclick="continue_to_payment()" class="waves-effect waves-light btn-large"><i class="material-icons right">navigate_next</i>Continuar</a>
           </div>
         </div>
-         
       </section>
-      <section>
+      <section id="section_payment" class="hide">
         <h5>Seleccionar Metodo de Pago</h5>
-        <form action="ticket.html" method="POST">
           <div class="row">
             <div class="input-field col s12 m6">
-              <select class="icons">
-                <option value="" disabled selected>Escoge tu Tarjeta</option>
-                <option value="" data-icon="images/visa.png" class="right circle">Visa</option>
-                <option value="" data-icon="images/master-card.png" class="right circle">Master Card</option>
-                <option value="" data-icon="images/american-express.png" class="right circle">American Express</option>
+              <select id="tarjeta" class="icons">
+                <option value="default" disabled selected>Escoge tu Tarjeta</option>
+                <option value="visa" data-icon="images/visa.png" class="right circle">Visa</option>
+                <option value="master" data-icon="images/master-card.png" class="right circle">Master Card</option>
+                <option value="american" data-icon="images/american-express.png" class="right circle">American Express</option>
               </select>
               <label>Tipo de Tarjeta</label>
             </div>
           </div>
           <div class="row">
             <div class="input-field col l6 m6 s12">
-              <input id="last_name" type="text" class="validate">
-              <label for="last_name">Nombre de Tarjetahabiente</label>
+              <input id="nombre" type="text" class="validate">
+              <label for="nombre">Nombre de Tarjetahabiente</label>
             </div>
           </div>
           <div class="row">
             <div class="input-field col l3 m3 s12">
-              <input id="last_name" type="number" data-length="12" class="validate">
-              <label for="last_name" data-error="Tarjeta inválida">No de Tarjeta</label>
+              <input id="no_tarjeta" type="number" data-length="12" class="validate">
+              <label for="no_tarjeta" data-error="Tarjeta inválida">No de Tarjeta</label>
             </div>
             <div class="input-field col l3 m3 s12">
-              <input id="last_name" type="number" data-length="4" class="validate">
-              <label for="last_name" data-error="Código Invalido">Codigo de Seguridad</label>
+              <input id="codigo" type="number" data-length="4" class="validate">
+              <label for="codigo" data-error="Código Invalido">Codigo de Seguridad</label>
             </div>
           </div>
           <div class="row">
@@ -394,7 +392,7 @@
           </div>
           <div class="row">
             <div class="input-field col l3 m3 s12">
-              <select>
+              <select id="mes">
                 <option value="" disabled selected>Mes</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -412,7 +410,7 @@
               <label>Fecha de Vencimiento</label>
             </div>
             <div class="input-field col l3 m3 s12">
-              <select>
+              <select id="anio">
                 <option value="" disabled selected>Año</option>
                 <option value="2017">2017</option>
                 <option value="2018">2018</option>
@@ -432,17 +430,25 @@
           </div>
           <div class="row">
             <div class="left">
-              <a class="waves-effect waves-light btn-large"><i class="material-icons left">navigate_before</i>Regresar</a>  
+              <a onclick="back_to_dishability()" class="waves-effect waves-light btn-large"><i class="material-icons left">navigate_before</i>Regresar</a>  
             </div>
             <div class="right">
-              <button class="waves-effect waves-light btn-large" type="submit"><i class="material-icons right">send</i>Pagar</button>
+              <button onclick="pay()" class="waves-effect waves-light btn-large"><i class="material-icons right">send</i>Pagar</button>
             </button>
             </div>
           </div>
-        </form>
       </section>
-      <section>
-        
+      <section id="section_successful" class="hide">
+        <div class="row">
+          <div class="col s12">
+            <a href="ticket.html" target="_blank"><i class="material-icons left">file_download</i>Descargar Boleto</a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="center col s12">
+            <img height="50%" width="50%"src="images/pago-exitoso.png" alt="" class="responsive">
+          </div> 
+        </div>
       </section>
 
     </div>

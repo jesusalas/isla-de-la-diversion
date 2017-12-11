@@ -8513,17 +8513,17 @@ if (Vel) {
       labelYearSelect: 'Select a year',
 
       // Months and weekdays
-      monthsFull: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
-      monthsShort: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-      weekdaysFull: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
-      weekdaysShort: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+      monthsFull: ['ENE', 'FEB', 'MAR', 'ABR', 'MAY', 'JUN', 'JUL', 'AGO', 'SEP', 'OCT', 'NOV', 'DIC'],
+      monthsShort: ['ENE', 'FEB', 'MAR', 'ABR', 'MAY', 'JUN', 'JUL', 'AGO', 'SEP', 'OCT', 'NOV', 'DIC'],
+      weekdaysFull: ['Domingo', 'Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado'],
+      weekdaysShort: ['Do', 'Lun', 'Ma', 'Mi', 'Ju', 'Vi', 'Sa'],
 
       // Materialize modified
-      weekdaysLetter: ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
+      weekdaysLetter: ['D', 'L', 'M', 'Mi', 'J', 'V', 'S'],
 
       // Today and clear
-      today: 'Today',
-      clear: 'Clear',
+      today: 'Hoy',
+      clear: 'Limpiar',
       close: 'Ok',
 
       // Picker close behavior (Prevent a change in behaviour for backwards compatibility)

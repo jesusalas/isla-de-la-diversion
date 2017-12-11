@@ -42,6 +42,11 @@ var motriz_quantity = document.getElementById("motriz_quantity");
 var intelectual_quantity = document.getElementById("intelectual_quantity");
 var visual_quantity = document.getElementById("visual_quantity");
 
+var section_tickets = document.getElementById("section_tickets");
+var section_dishability = document.getElementById("section_dishability");
+var section_payment = document.getElementById("section_payment");
+var section_successful = document.getElementById("section_successful");
+
 function show_page(page){
 	inicio.classList.add('hide');
 	nosotros.classList.add('hide');
@@ -86,11 +91,12 @@ function continue_to_dishability(){
 	if (limit <= 0){
 		alert("Para continuar debes seleccionar minimo un boleto");
 	}else{
-
 		total.innerHTML = parseFloat(publico_subtotal.innerHTML) + parseFloat(discapacitado_subtotal.innerHTML);
 		publico_total.innerHTML = publico_quantity.innerHTML;
 		discapacitado_total.innerHTML = discapacitado_quantity.innerHTML;
+		show_section("section_dishability");
 	}
+
 }
 
 function change_dishability(element, operation){
@@ -122,6 +128,8 @@ function back_to_tickets(){
 	motriz_quantity.innerHTML = 0;
 	intelectual_quantity.innerHTML = 0;
 	visual_quantity.innerHTML = 0;
+
+	show_section("section_tickets");
 }
 
 function continue_to_payment(){
@@ -131,11 +139,50 @@ function continue_to_payment(){
 	if (dishability_total != dishability_selected){
 		alert("Para continuar debes especificar todas las discapacidades");
 	}else{
-		alert("es hora de pagar");
+		show_section("section_payment");	
 	}
+
+	
 }
 
-function muestra(){
-	var value = document.getElementById('motriz_quantity').innerHTML;
-	alert(value);
+function pay(){
+	var tarjeta = document.getElementById("tarjeta").value;
+  	var dia = document.getElementById("dia").value;
+  	var folio = localStorage.getItem("Folio");
+
+  	if (folio == null){
+		localStorage.setItem("Folio", "1");
+	}else{
+		folio = parseInt(folio) + 1;
+		localStorage.setItem("Folio", folio);
+	}
+
+	localStorage.setItem("Tarjeta", tarjeta);
+    localStorage.setItem("Publico_general", publico_quantity.innerHTML);
+    localStorage.setItem("Discapacidad_motriz", motriz_quantity.innerHTML);
+    localStorage.setItem("Discapacidad_intelectual", intelectual_quantity.innerHTML);
+    localStorage.setItem("Discapacidad_visual", visual_quantity.innerHTML);
+    localStorage.setItem("Dia", dia);
+    
+    var ticket_detail = document.getElementById("ticket_detail");
+    ticket_detail.classList.add('hide');
+    show_section("section_successful");
+}
+
+function back_to_dishability(){
+	show_section("section_dishability");
+}
+
+function continue_to_successful(){
+
+}
+
+function show_section(section){
+	section_tickets.classList.add('hide');
+	section_dishability.classList.add('hide');
+	section_payment.classList.add('hide');
+	section_successful.classList.add('hide');
+	var pagina = document.getElementById(section);
+
+	pagina.classList.remove('hide');
 }
